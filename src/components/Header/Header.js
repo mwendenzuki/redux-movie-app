@@ -8,6 +8,7 @@ import "./Header.scss";
 const Header = () => {
   const [term, setTerm] = useState("")
   const dispatch = useDispatch()
+
   const submitHandler = (e) => {
     e.preventDefault()
     if(term === "") return alert("Please enter search term!")
