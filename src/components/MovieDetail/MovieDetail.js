@@ -31,7 +31,7 @@ const MovieDetail = () => {
 							IMDB Rating <i className="fa fa-star"></i> : {data.imdbRating}
 						</span>
 					</div>
-					<div>
+				<div>
 						<span>
 							IMDB Votes <i className="fa fa-thumbs-up"></i> : {data.imdbVotes}
 						</span>
