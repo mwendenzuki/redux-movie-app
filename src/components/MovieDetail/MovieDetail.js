@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchAsyncMovieOrShowDetails, getSelectedMovieOrShow, 
-	removeSelectedMovieOrShow } from '../../features/movies/movieSlice';
+//import Header from '../Header/Header';
+import { fetchAsyncMovieOrShowDetails, getSelectedMovieOrShow, removeSelectedMovieOrShow } from '../../features/movies/movieSlice';
 import './MovieDetail.scss'
 
 const MovieDetail = () => {
-	const { imdbID } = useParams()
+	const { imdbID } = useParams()	
 	const dispatch = useDispatch()
 	const data = useSelector(getSelectedMovieOrShow)
 	console.log(data)
@@ -19,6 +19,8 @@ const MovieDetail = () => {
 	}, [dispatch, imdbID])
 
 	return (
+		<>
+	
 		<div className="movie-section">
 			{Object.keys(data || {}).length === 0 ? (<div>...Loading</div>
 			): (
@@ -79,6 +81,7 @@ const MovieDetail = () => {
 			</>
 				)}
 		</div>
+	</>
 	);
 };
 
