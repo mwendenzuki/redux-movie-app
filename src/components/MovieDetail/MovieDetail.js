@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
-//import Header from '../Header/Header';
 import { fetchAsyncMovieOrShowDetails, getSelectedMovieOrShow, removeSelectedMovieOrShow } from '../../features/movies/movieSlice';
 import './MovieDetail.scss'
 
