@@ -1,16 +1,19 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useDispatch, } from 'react-redux';
+import { useNavigate } from 'react-router-dom'
 import MovieListing from '../MovieListing/MovieListing'
-import useLocalStorage from '../../useLocalStorage';
 
 import { fetchAsyncMovies, fetchAsyncShows,} from '../../features/movies/movieSlice';
 
 const Home = () => {
-	const [ saveResults, setSaveResults ] = useLocalStorage("searchresults", "")
+	let navigate = useNavigate()
 	const movieText = "Harry"
 	const showText = "Friends"
 	
+	const handleChange = () => {
+		navigate("/")
+	}
 
 	const dispatch = useDispatch()
 
@@ -22,7 +25,7 @@ const Home = () => {
 	return (
 
 		<div>
-			<div className="banner-img" onChange={(e) => setSaveResults(e.target.value)} value={saveResults}>
+			<div className="banner-img" onChange={handleChange}>
 			<MovieListing />
 			</div>
 		</div>

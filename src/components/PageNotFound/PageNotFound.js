@@ -1,10 +1,10 @@
 import React from 'react';
 import user from '../../images/pnf.jpg'
+import './PageNotFound.scss'
 
 const PageNotFound = () => {
 	return (
-		<div>
-			<h2>Page not found</h2>
+		<div className="page-not-found">
 			<img src={user} alt="page not found"/>
 		</div>
 	);
